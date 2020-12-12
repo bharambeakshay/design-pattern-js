@@ -25,12 +25,7 @@ let book = (function () {
 
     return {
         getInstance: function () {
-
-            if (!bookInstance) {
-                bookInstance = type();
-            }
-
-            return bookInstance;
+            return !bookInstance ? bookInstance = type() : bookInstance;
         }
     }
 
