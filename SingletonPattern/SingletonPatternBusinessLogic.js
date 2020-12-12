@@ -1,6 +1,21 @@
+/******************************************************************************************************
+* @purpose  :  Design a singleton design pattern for a booky persons performs various actions.
+* 	
+*  @Auther   : Akshay
+*  @File     : SingletonPatternBusinessLogic.js 
+*  
+************************************************************************************************/
+
+
 let book = (function () {
 
     let bookInstance;
+
+
+    /**
+     * @function  type():  Describes  booky nature
+     * @param { }: no parameters are needed
+     */
 
     function type() {
 
@@ -22,6 +37,10 @@ let book = (function () {
             listening: listening
         }
     }
+    /**
+    * @function  getInstance():  returns the sole instance of class
+    * @param { }: no parameters are needed
+    */
 
     return {
         getInstance: function () {
@@ -31,6 +50,4 @@ let book = (function () {
 
 })();
 
-let isBook = book.getInstance();
-isBook.reading();
-isBook.writing();
+module.exports = { book }
