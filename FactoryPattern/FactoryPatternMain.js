@@ -1,8 +1,18 @@
+/******************************************************************************************************
+* @purpose  :  Design a factory design pattern for a books to oragnise them in shelf.
+* 	
+*  @Auther   : Akshay
+*  @File     : FactoryPatternMain.js 
+*  
+************************************************************************************************/
+
+// From following code input is provided to business logic
+
 const { BookShelf } = require('./FactoryPatternBusinessLogic');
 //const bookShelf = require('./FactoryPatternBusinessLogic')
 let bookShelf = new BookShelf();
 let tempBook;
-luck = Math.floor(Math.random() * 3);
+luck = Math.floor(Math.random() * 3); // Random number is generated which is passed to createShelf class
 switch (luck) {
     case 0:
         tempBook = bookShelf.createShelf("Wear Yor Attitude", "selfhealing", "Jeff")
